@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>A static page</title>
+  <link rel="stylesheet" href="/stylesheets/main.css">
+  <script type="text/javascript" src="/js/jquery-3.4.1.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      var timeoutId = 0;
+
+      var performRequest = function(command) {
+        $.ajax({
+          url: "/"+command,
+        });
+      };
+
+      var command;
+
+      $('.button, .center-button').on('mousedown', function(elem) {
+        command = $(this).attr('id');
+        timeoutId = setInterval(function() {
+          performRequest(command)
+        }, 100);
+      }).on('mouseup mouseleave', function() {
+        clearTimeout(timeoutId);
+      });
+
+      $('.button').click(function() {
+        command = $(this).attr('id');
+        performRequest(command);
+      });
+    });
+  </script>
+</head>
+<body>
+  <nav>
+    <a id="up" class="button top" href="#"><i class="icon-play"></i></a>
+    <a id="right" class="button right" href="#"><i class="icon-forward"></i></a>
+    <a id="left" class="button left" href="#"><i class="icon-backward"></i></a>
+    <a id="down" class="button bottom" href="#"><i class="icon-pause"></i></a>
+    <a id="click" class="center-button" href="#"><i class="icon-stop"></i></a>
+  </nav>
+</body>
+</html>
