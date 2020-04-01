@@ -7,12 +7,11 @@
   <script type="text/javascript" src="/js/jquery-3.4.1.min.js"></script>
   <script>
     $(document).ready(function() {
+      var ws = new WebSocket("ws://192.168.1.82:8080/cmd");
       var timeoutId = 0;
 
       var performRequest = function(command) {
-        $.ajax({
-          url: "/"+command,
-        });
+        ws.send(command)
       };
 
       var command;
@@ -26,7 +25,7 @@
         clearTimeout(timeoutId);
       });
 
-      $('.button').click(function() {
+      $('.button, .center-button').click(function() {
         command = $(this).attr('id');
         performRequest(command);
       });
@@ -35,10 +34,10 @@
 </head>
 <body>
   <nav>
-    <a id="up" class="button top" href="#"><i class="icon-play"></i></a>
-    <a id="right" class="button right" href="#"><i class="icon-forward"></i></a>
-    <a id="left" class="button left" href="#"><i class="icon-backward"></i></a>
-    <a id="down" class="button bottom" href="#"><i class="icon-pause"></i></a>
+    <a id="mousemoveup" class="button top" href="#"><i class="icon-play"></i></a>
+    <a id="mousemoveright" class="button right" href="#"><i class="icon-forward"></i></a>
+    <a id="mousemoveleft" class="button left" href="#"><i class="icon-backward"></i></a>
+    <a id="mousemovedown" class="button bottom" href="#"><i class="icon-pause"></i></a>
     <a id="click" class="center-button" href="#"><i class="icon-stop"></i></a>
   </nav>
 </body>

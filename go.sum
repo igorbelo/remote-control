@@ -7,7 +7,12 @@ github.com/davecgh/go-spew v1.1.1/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSs
 github.com/go-ole/go-ole v1.2.4/go.mod h1:XCwSNxSkXRo4vlyPy93sltvi/qJq0jqQhjqQNIwKuxM=
 github.com/go-vgo/robotgo v0.0.0-20200324160128-8bfef356cc5a h1:WA8PIHttiW7q6PMDu3en2YCzS5Fr5IlZX5+xEOXkOmM=
 github.com/go-vgo/robotgo v0.0.0-20200324160128-8bfef356cc5a/go.mod h1:qV/tA6gw/NN1IA0LZ65M4l3nOH+4SS5XVdttyd4/ycc=
+github.com/gorilla/websocket v1.4.2 h1:+/TMaTYc4QFitKJxsQ7Yye35DkWvkdLcvGKqM+x0Ufc=
+github.com/gorilla/websocket v1.4.2/go.mod h1:YR8l580nyteQvAITg2hZ9XVh4b55+EU/adAjf1fMHhE=
+github.com/itchyny/volume-go v0.1.0 h1:nhsG1328IZh2p+G4xtCEB+30kqmJ72MfCRadw91J62M=
+github.com/itchyny/volume-go v0.1.0/go.mod h1:HkEkJcoQvzaGwNjlvYbB7ybZbd29Z9pGVxvb3j172uk=
 github.com/lxn/win v0.0.0-20191128105842-2da648fda5b4/go.mod h1:ouWl4wViUNh8tPSIwxTVMuS014WakR1hqvBc2I0bMoA=
+github.com/moutend/go-wca v0.1.1/go.mod h1:tOejf27SfSMa+8LuMhPE0bdaFNnoxlmMGvo/VwAWi7Q=
 github.com/otiai10/curr v0.0.0-20150429015615-9b4961190c95/go.mod h1:9qAhocn7zKJG+0mI8eUu6xqkFDYS2kb2saOteoSB3cE=
 github.com/otiai10/curr v0.0.0-20190513014714-f5a3d24e5776/go.mod h1:3HNVkVOU7vZeFXocWuvtcS0XSFLcf2XUSDHkq9t1jU4=
 github.com/otiai10/gosseract v2.2.1+incompatible/go.mod h1:XrzWItCzCpFRZ35n3YtVTgq5bLAhFIkascoRo8G32QE=
